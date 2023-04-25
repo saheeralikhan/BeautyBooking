@@ -36,9 +36,11 @@
             this.dateTimeParserService = dateTimeParserService;
             this.salonsService = salonsService;
         }
-
+        
         public async Task<IActionResult> Index()
         {
+            // This is added commnet in branch-1
+
             var user = await this.userManager.GetUserAsync(this.HttpContext.User);
             var userId = await this.userManager.GetUserIdAsync(user);
 
